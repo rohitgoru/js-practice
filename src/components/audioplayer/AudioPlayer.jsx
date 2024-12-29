@@ -82,18 +82,20 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="bg-[#251E3E] px-4 py-2 rounded-2xl border border-[#8954F6]/20 w-full flex items-center justify-between gap-3">
-      <div className="controls">
-        <div onClick={handlePlayPause}>
-          {!playing ? (
-            <img src="/icons-dark/play-icon.png" className="w-full" />
-          ) : (
-            <img src="/icons-dark/pause-icon.png" className="w-full" />
-          )}
+    <>
+      <div className="bg-[#251E3E] px-4 py-2 rounded-2xl border border-[#8954F6]/20 w-full flex items-center justify-between gap-3">
+        <div className="controls">
+          <div onClick={handlePlayPause}>
+            {!playing ? (
+              <img src="/icons-dark/play-icon.png" className="w-full" />
+            ) : (
+              <img src="/icons-dark/pause-icon.png" className="w-full" />
+            )}
+          </div>
         </div>
+        <div id="waveform" ref={waveformRef} className="w-full" />
+        <div className="text-white">{formatTime(currentTime)}</div>
       </div>
-      <div id="waveform" ref={waveformRef} className="w-full" />
-      <div className="text-white">{formatTime(currentTime)}</div>
-    </div>
+    </>
   );
 }

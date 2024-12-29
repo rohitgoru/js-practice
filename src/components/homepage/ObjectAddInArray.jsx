@@ -8,7 +8,7 @@ const ObjectAddInArray = () => {
   const [data, setdata] = useState([
     {
       id: 1,
-      name: "rohit",
+      name: "tanu",
       like: 0,
       dislike: 0,
     },
@@ -23,6 +23,7 @@ const ObjectAddInArray = () => {
   const adddata = () => {
     setrandom(random + 1);
     setdata((a) => [...a, { id: random, name: typename, like: 0, dislike: 0 }]);
+    setname("");
   };
 
   const handleremove = (id) => {

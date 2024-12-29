@@ -24,6 +24,8 @@ const FilterJs = () => {
 
   const handleSort = () => {
     const sortedArray = [...sortedData].sort((a, b) => b.age - a.age);
+    console.log(sortedArray);
+
     setSortedData(sortedArray);
   };
 

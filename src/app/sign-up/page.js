@@ -27,8 +27,10 @@ const CreateAccount = () => {
     },
     validationSchema,
     onSubmit: (values) => {
+      console.log(values);
+
       // Handle form submission
-      router.push("/account-created-successfully");
+      // router.push("/account-created-successfully");
     },
   });
 
